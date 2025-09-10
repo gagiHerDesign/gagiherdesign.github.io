@@ -1,0 +1,31 @@
+body {
+  margin-bottom: 30vh;
+  overflow-x: hidden;
+  font-family: "Roboto",Arial, Helvetica, sans-serif;
+  background-color: #fafafa;
+}
+
+.logoJOY {
+  height: 40px;
+  margin: 0 auto;
+}
+
+.imgContainer img {
+  margin: 10px 0; 
+}
+
+.thumbnail{
+  cursor: pointer;
+}
+
+.article{
+  width: 80%;
+  margin-top: 80px;
+  text-align: left;
+}
+
+@media (min-width: 600px) {
+  .article{
+    width: 40%;
+  }
+}

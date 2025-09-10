@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.css'>
+        <link rel="stylesheet" href="https://kit.fontawesome.com/20b9f2bee6.css" crossorigin="anonymous">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./scroll.css">
+        <!-- 字體 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <title>Joy Portfolio</title>
+        <!-- 引入 jQuery 和 GSAP 的 CDN -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+    </head>
+
+    <body>
+        <main>
+            <section id="heroSection" class="section">
+                <div class="heroSection">
+                    <canvas id="introBack"></canvas>
+                    <div>
+                        <nav class="text-light navbar navbar-expand-md justify-content-end"
+                            style="background-color: #00000000;">
+                            <div class="container-fluid">
+                                <div class="collapse navbar-collapse justify-content-end px-5"
+                                    id="navbarSupportedContent">
+                                    <ul class="nav justify-content-end mb-2 mb-lg-0 fw-semibold fs-4">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-light" aria-current="page"
+                                                href="#application">Application</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-light" href="#logi">Logi</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-light" href="#products ">Products </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-light" href="#contact">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="heroContainer">
+                            <div class="heroBackgroundCircle">
+                                <img class="circleImg" src="./img/資產 4.png" alt="JOY">
+                                <div class="circleOne"></div>
+                                <div class="circleTwo"></div>
+                            </div>
+                            <div class="heroBackgroundContent">
+                                <div class="heroTitle">
+                                    <h1 class="fw-bold">Joy
+                                        Huang</h1>
+                                    <h3>Front end Engineer</h3>
+                                    <h3>UI/UX Research</h3>
+                                </div>
+                                <div class="heroText">
+                                    <p>
+                                        A driven and innovative individual with a strong foundation in Industrial Design
+                                        and experience as a frontend engineer. I am passionate about combining design
+                                        and technology to create meaningful user experiences and am eager to deepen my
+                                        expertise in Human-Computer Interaction through graduate study.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 第一部分 -->
+
+            <div class="bgsecond">
+                <section id="logi" class="container py-5 section">
+                    <h2 class="myCardTitle">Logitech </h2>
+                    <h4>Industry-Academia Project</h4>
+                    <div class="myCard">
+                        <h3 class="cardText">Gratia</h3>
+                        <a href="/profile/logi/gratia.html">
+                            <img class="bigCardimg" src="/img/logi/gratia/gratia (1).jpg" alt="大張卡片圖">
+                        </a>
+                    </div>
+                    <div class="myCard">
+                        <h3 class="cardText">eligere</h3>
+                        <a href="/profile/logi/eligere.html">
+                            <img class="bigCardimg" src="/img/logi/eligere/eligere (1).jpg" alt="大張卡片圖">
+                        </a>
+                    </div>
+                </section>
+            </div>
+            <!-- 第二部分 -->
+            <div class="bgfirst">
+                <section id="application" class="container py-5 section">
+                    <h2 class="myCardTitle">Application</h2>
+                    <h4>web application & chatbot</h4>
+                    <div class="myCard">
+                        <h3 class="cardText">SUSI</h3>
+                        <a href="/profile/application/susi.html">
+                            <img class="bigCardimg" src="/img/susiBig.jpg" alt="大張卡片圖">
+                        </a>
+                    </div>
+                    <div class="myCard">
+                        <h3 class="cardText">VEGE</h3>
+                        <a href="/profile/application/vegechat.html">
+                            <img class="bigCardimg" src="/img/application/vegeChat/vege (4).jpg" alt="大張卡片圖">
+                        </a>
+                    </div>
+                </section>
+            </div>
+            <!-- 第三部分 -->
+            <div class="bgthird">
+                <section id="products" class="container py-5 section">
+                    <h2 class="myCardTitle">Products & Crafts</h2>
+                    <div class="row">
+                        <div class="productCard col-12 col-sm-6">
+                            <h3 class="cardText">porty</h3>
+                            <a href="/profile/products/porty.html">
+                                <img class="productCardImg" src="/img/products/porty/porty (1).gif" alt="大張卡片圖">
+                            </a>
+                        </div>
+                        <div class="productCard col-12 col-sm-6">
+                            <h3 class="cardText">RE: VEGE</h3>
+                            <a href="/profile/products/re.html">
+                                <img class="productCardImg" src="/img/products/re/re (4).jpg" alt="大張卡片圖">
+                            </a>
+                            </a>
+                        </div>
+                        <div class="productCard col-12 col-sm-6">
+                            <h3 class="cardText">minimoo </h3>
+                            <a href="/profile/products/minimoo.html">
+                                <img class="productCardImg" src="/img/products/minimoo/minimoo (2).jpg" alt="大張卡片圖">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- 聯絡我 -->
+            <div class="bgforth">
+                <section id="contact" class="container py-5 section">
+                    <h2 class="myCardTitle mb-5">Contact</h2>
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img class="profile-img img-fluid" src="/img/黃佳琦 頭貼.jpg" alt="my Photo">
+                            <div class="social-links mt-5">
+                                <a href="https://www.linkedin.com/in/joy-huang-b73929209" target="_blank">LinkedIn</a> |
+                                <a href="https://github.com/gagiHerDesign" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="py-3 col-md-8">
+                            <h5>Feel free to reach out! 😊 I'm always happy to connect, whether you have questions,
+                                ideas to share, or just want to say hello. Looking forward to hearing from you! 📩</h5>
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-light">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section class="footer container-fluid bg-transparent text-center">
+                    <p class="mt-3 pt-3">Joy Huang</p>
+                    <p class="mb-0 pb-3">&copy;Copyright All Rights Reserved</p>
+                </section>
+            </div>
+        </main>
+        <!-- 引入 jQuery 和 GSAP 的 CDN -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+        <script src="./jsEffect/colorBackground.js"></script>
+        <script src="./jsEffect/heroMouseMove.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.js'></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+
+</html>
