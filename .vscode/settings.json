@@ -4,5 +4,29 @@
     "eligere",
     "minimoo",
     "SUSI"
-  ]
+  ],
+
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+
+  // Use Prettier as default formatter for common web files
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // If you want ESLint auto-fix on save, enable the extension and add settings manually.
+
+  // Prettier: only if you want Prettier to run even without a config file in repo
+  "prettier.requireConfig": false
 }

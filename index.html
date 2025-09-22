@@ -1,196 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/20b9f2bee6.css"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./panel.css" />
+    <!-- 字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>JIACHI Portfolio</title>
+    <!-- 引入 jQuery 和 GSAP 的 CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.css'>
-        <link rel="stylesheet" href="https://kit.fontawesome.com/20b9f2bee6.css" crossorigin="anonymous">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="./scroll.css">
-        <!-- 字體 -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet">
-        <title>Joy Portfolio</title>
-        <!-- 引入 jQuery 和 GSAP 的 CDN -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
-    </head>
-
-    <body>
-        <main>
-            <section id="heroSection" class="section">
-                <div class="heroSection">
-                    <canvas id="introBack"></canvas>
-                    <div>
-                        <nav class="text-light navbar navbar-expand-md justify-content-end"
-                            style="background-color: #00000000;">
-                            <div class="container-fluid">
-                                <div class="collapse navbar-collapse justify-content-end px-5"
-                                    id="navbarSupportedContent">
-                                    <ul class="nav justify-content-end mb-2 mb-lg-0 fw-semibold fs-4">
-                                        <li class="nav-item">
-                                            <a class="nav-link text-light" aria-current="page"
-                                                href="#application">Application</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link text-light" href="#logi">Logi</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link text-light" href="#products ">Products </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link text-light" href="#contact">Contact</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
-                        <div class="heroContainer">
-                            <div class="heroBackgroundCircle">
-                                <img class="circleImg" src="./img/資產 4.png" alt="JOY">
-                                <div class="circleOne"></div>
-                                <div class="circleTwo"></div>
-                            </div>
-                            <div class="heroBackgroundContent">
-                                <div class="heroTitle">
-                                    <h1 class="fw-bold">Joy
-                                        Huang</h1>
-                                    <h3>Front end Engineer</h3>
-                                    <h3>UI/UX Research</h3>
-                                </div>
-                                <div class="heroText">
-                                    <p>
-                                        A driven and innovative individual with a strong foundation in Industrial Design
-                                        and experience as a frontend engineer. I am passionate about combining design
-                                        and technology to create meaningful user experiences and am eager to deepen my
-                                        expertise in Human-Computer Interaction through graduate study.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  <body>
+    <main>
+      <section id="heroSection" class="section">
+        <div class="heroSection">
+          <nav class="navbar navbar-expand-md justify-content-end">
+            <div class="container-fluid">
+              <div
+                class="collapse navbar-collapse justify-content-end px-5"
+                id="navbarSupportedContent"
+              >
+                <ul class="nav justify-content-end mb-2 mb-lg-0 fw-semibold fs-4">
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" aria-current="page" href="#skill">Skill</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" href="#application ">Application </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" href="#logi">Logi</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" href="#contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="heroText">
+            <h1>JIACHI HUANG</h1>
+            <p>I design and code beautifully simple things, and I love what I do.</p>
+          </div>
+          <div class="heroContainer">
+            <div class="panels">
+              <div class="panels__container">
+                <a href="#" class="panel">
+                  <div class="panelRight__content">
+                    <h3 class="panel__title">EXPLORE</h3>
+                    <img class="panel__title bigPhoto" src="./img/黃佳琦 頭貼.jpg" alt="MY PHOTO" />
+                  </div>
+                </a>
+                <a href="#" class="panel">
+                  <div class="panelLeft__content">
+                    <h3 class="panel__title">DISCOVER</h3>
+                    <img class="panel__title bigEmoji" src="./img/Group 3.png" alt="MY PHOTO" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <marquee scrollamount="15" scrolldelay="0.1"
+        >@gagiherdesign @gagiherdesign @gagiherdesign @gagiherdesign</marquee
+      >
+      <!-- 第一部分 -->
+      <section id="skill">
+        <div class="my-5 skillContent">
+          <div class="row text-center mb-5 text-light">
+            <h2 data-aos="fade-up" data-aos-duration="1000" class="fw-bold">
+              HI, I am JIACHI(JOY) HUANG
+            </h2>
+            <p data-aos="fade-up" data-aos-duration="1500" class="fs-6">
+              UX Engineer with hands-on experience in JavaScript, HTML, CSS, and interest in HCI,
+              prototyping, and scalable web architecture. Experienced in designing intuitive,
+              accessible interfaces and building scalable, production-ready UI systems across
+              diverse frameworks. M.S. Human-Computer Interaction candidate at University of
+              Maryland, expected graduation June 2027.
+            </p>
+          </div>
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+              <div class="p-5 card h-100">
+                <div class="card-body d-flex flex-column align-items-center">
+                  <img src="./img/designcard.png" class="card-img-top skillCardIcon" alt="..." />
+                  <h5 class="card-title fw-bold">Web Design</h5>
+                  <p class="card-text">
+                    I value simple content structure, clean design patterns, and thoughtful
+                    interactions.
+                  </p>
+                  <h6 class="skillSmallTitle">Things I enjoy designing:</h6>
+                  <p>UX, UI, Web, Apps, Logos</p>
+                  <h6 class="skillSmallTitle">Design & Research Tools:</h6>
+                  <p class="text-center">
+                    Figma,
+                    <br />
+                    Illustrator,
+                    <br />
+                    Photoshop,
+                    <br />
+                    UX Research,
+                    <br />
+                    Interface Design,
+                    <br />
+                    Wireframing,
+                    <br />
+                    Prototyping
+                  </p>
                 </div>
-            </section>
-            <!-- 第一部分 -->
+              </div>
+            </div>
+            <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+              <div class="p-5 card h-100">
+                <div class="card-body d-flex flex-column align-items-center">
+                  <img src="./img/develop.png" class="card-img-top skillCardIcon" alt="..." />
+                  <h5 class="card-title fw-bold">Frontend Developer</h5>
+                  <p class="card-text">
+                    I like to code things, and bring ideas to life in the browser.
+                  </p>
+                  <h6 class="skillSmallTitle">Languages I speak:</h6>
+                  <p>JavaScript, TypeScript, HTML, CSS, C#</p>
+                  <h6 class="skillSmallTitle">Frontend Frameworks:</h6>
+                  <p class="text-center">React.js, Next.js, Vue.js, Bootstrap,TailwindCSS</p>
+                  <h6 class="skillSmallTitle">Backend & Database</h6>
+                  <p>Node.js, Express.js, MongoDB</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 第二部分 -->
+      <section id="application" class="container py-5">
+        <h2 class="mb-5 fw-bold">My Recent Work</h2>
 
-            <div class="bgsecond">
-                <section id="logi" class="container py-5 section">
-                    <h2 class="myCardTitle">Logitech </h2>
-                    <h4>Industry-Academia Project</h4>
-                    <div class="myCard">
-                        <h3 class="cardText">Gratia</h3>
-                        <a href="/profile/logi/gratia.html">
-                            <img class="bigCardimg" src="/img/logi/gratia/gratia (1).jpg" alt="大張卡片圖">
-                        </a>
-                    </div>
-                    <div class="myCard">
-                        <h3 class="cardText">eligere</h3>
-                        <a href="/profile/logi/eligere.html">
-                            <img class="bigCardimg" src="/img/logi/eligere/eligere (1).jpg" alt="大張卡片圖">
-                        </a>
-                    </div>
-                </section>
+        <div class="row gy-5">
+          <!-- 第一行：文字 + 圖片 -->
+          <div class="row gy-5 flex-row-reverse">
+            <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+              <img
+                src="./img/application/susi/susi (1).jpg"
+                alt="susi"
+                class="img-fluid rounded shadow-sm"
+              />
             </div>
-            <!-- 第二部分 -->
-            <div class="bgfirst">
-                <section id="application" class="container py-5 section">
-                    <h2 class="myCardTitle">Application</h2>
-                    <h4>web application & chatbot</h4>
-                    <div class="myCard">
-                        <h3 class="cardText">SUSI</h3>
-                        <a href="/profile/application/susi.html">
-                            <img class="bigCardimg" src="/img/susiBig.jpg" alt="大張卡片圖">
-                        </a>
-                    </div>
-                    <div class="myCard">
-                        <h3 class="cardText">VEGE</h3>
-                        <a href="/profile/application/vegechat.html">
-                            <img class="bigCardimg" src="/img/application/vegeChat/vege (4).jpg" alt="大張卡片圖">
-                        </a>
-                    </div>
-                </section>
+            <div
+              class="col-md-6 d-flex flex-column justify-content-center"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
+              <h3 class="fw-bold">SUSI</h3>
+              <p class="text-muted">Web E-Commerce Platform</p>
+              <p>｜Vue, Bootstrap, MongoDB, Express.js｜</p>
+              <div class="mt-2">
+                <a class="btn btn-dark" href="/profile/application/susi.html">See more</a>
+                <a
+                  class="btn btn-light border"
+                  href="https://github.com/gagiHerDesign/susi-front"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Github</a
+                >
+              </div>
             </div>
-            <!-- 第三部分 -->
-            <div class="bgthird">
-                <section id="products" class="container py-5 section">
-                    <h2 class="myCardTitle">Products & Crafts</h2>
-                    <div class="row">
-                        <div class="productCard col-12 col-sm-6">
-                            <h3 class="cardText">porty</h3>
-                            <a href="/profile/products/porty.html">
-                                <img class="productCardImg" src="/img/products/porty/porty (1).gif" alt="大張卡片圖">
-                            </a>
-                        </div>
-                        <div class="productCard col-12 col-sm-6">
-                            <h3 class="cardText">RE: VEGE</h3>
-                            <a href="/profile/products/re.html">
-                                <img class="productCardImg" src="/img/products/re/re (4).jpg" alt="大張卡片圖">
-                            </a>
-                            </a>
-                        </div>
-                        <div class="productCard col-12 col-sm-6">
-                            <h3 class="cardText">minimoo </h3>
-                            <a href="/profile/products/minimoo.html">
-                                <img class="productCardImg" src="/img/products/minimoo/minimoo (2).jpg" alt="大張卡片圖">
-                            </a>
-                        </div>
-                    </div>
-                </section>
+          </div>
+          <!-- 第二行：圖片 + 文字 -->
+          <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+            <img
+              src="./img/application/vegeChat/vege (1).jpg"
+              alt="vege"
+              class="img-fluid rounded shadow-sm"
+            />
+          </div>
+          <div
+            class="col-md-6 d-flex flex-column justify-content-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="800"
+          >
+            <h3 class="fw-bold">Taiwan_VEGE</h3>
+            <p class="text-muted">Line App Chatbot</p>
+            <p>｜JavaScript, Node.js, UIUX Design｜</p>
+            <div class="mt-2">
+              <a class="btn btn-dark" href="/profile/application/vegechat.html">See more</a>
+              <a
+                class="btn btn-light border"
+                href="https://github.com/gagiHerDesign/line_bot_Taiwan_vege"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Github</a
+              >
             </div>
-            <!-- 聯絡我 -->
-            <div class="bgforth">
-                <section id="contact" class="container py-5 section">
-                    <h2 class="myCardTitle mb-5">Contact</h2>
-                    <div class="row">
-                        <div class="col-md-4 text-center">
-                            <img class="profile-img img-fluid" src="/img/黃佳琦 頭貼.jpg" alt="my Photo">
-                            <div class="social-links mt-5">
-                                <a href="https://www.linkedin.com/in/joy-huang-b73929209" target="_blank">LinkedIn</a> |
-                                <a href="https://github.com/gagiHerDesign" target="_blank">GitHub</a>
-                            </div>
-                        </div>
-                        <div class="py-3 col-md-8">
-                            <h5>Feel free to reach out! 😊 I'm always happy to connect, whether you have questions,
-                                ideas to share, or just want to say hello. Looking forward to hearing from you! 📩</h5>
-                            <form id="contactForm">
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" rows="5" required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-light">Send</button>
-                            </form>
-                        </div>
-                    </div>
-                </section>
-                <section class="footer container-fluid bg-transparent text-center">
-                    <p class="mt-3 pt-3">Joy Huang</p>
-                    <p class="mb-0 pb-3">&copy;Copyright All Rights Reserved</p>
-                </section>
+          </div>
+        </div>
+      </section>
+      <!-- 第三部分 -->
+      <section id="Logi">
+        <div class="my-5 skillContent">
+          <div class="row mb-5 text-light">
+            <h2 data-aos="fade-up" data-aos-duration="1000" class="fw-bold">
+              LogiTech 2025 Conceptual Design for Future Information Phenomena
+            </h2>
+            <p data-aos="fade-up" data-aos-duration="1500" class="fs-6">
+              Designed, prototyped, tested, and iterated the final model, presenting it to the U.S.
+              headquarters and the design team.
+            </p>
+          </div>
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+              <div class="card h-100 border-0">
+                <img src="./img/logi/gratia/gratia (1).jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Gratia</h5>
+                  <p class="card-text">｜UIUX Design, Product Design |</p>
+                  <a class="btn btn-dark" href="/profile/logi/gratia.html">See more</a>
+                </div>
+              </div>
             </div>
-        </main>
-        <!-- 引入 jQuery 和 GSAP 的 CDN -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
-        <script src="./jsEffect/colorBackground.js"></script>
-        <script src="./jsEffect/heroMouseMove.js"></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.js'></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
-    </body>
-
+            <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+              <div class="card h-100 border-0">
+                <img src="./img/logi/eligere/eligere (1).jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">eligere</h5>
+                  <p class="card-text">｜UIUX Design, Product Design |</p>
+                  <a class="btn btn-dark" href="/profile/logi/eligere.html">See more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- 頁尾聯絡我 -->
+    <footer id="contact" class="bg-dark text-light py-5">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <!-- 左側 Logo 和社群 -->
+          <div class="col-md-9 mb-4">
+            <h5 class="mb-3">JIACHI HUANG</h5>
+            <p>joy9154@gmail.com</p>
+            <div class="d-flex gap-3">
+              <a href="https://www.linkedin.com/in/joy-huang-b73929209" target="_blank"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a href="https://github.com/gagiHerDesign/gagiherdesign.github.io" target="_blank"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <!-- 中間和右側的連結區塊 -->
+          <div class="col-md-3 mb-4">
+            <h6>Topic</h6>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-dark text-decoration-none">Page</a></li>
+              <li><a href="#" class="text-dark text-decoration-none">Page</a></li>
+              <li><a href="#" class="text-dark text-decoration-none">Page</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- 引入 jQuery 和 GSAP 的 CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+    <script src="./jsEffect/heroMouseMove.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>

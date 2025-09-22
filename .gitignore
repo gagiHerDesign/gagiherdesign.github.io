@@ -1,0 +1,31 @@
+# Node
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# Build outputs
+dist/
+build/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Environment files
+.env
+
+# Logs
+logs/
+*.log
+
+# Optional coverage
+coverage/
+
+# JetBrains
+.idea/
+
+# Others
+.sass-cache/
+.cache/

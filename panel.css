@@ -1,0 +1,316 @@
+:root {
+  --duration: 1s;
+  --ease: cubic-bezier(0.6, 0, 0.2, 1);
+
+  --offsetSize: 10%;
+  /* contentOffset = offsetSize * 1.4 */
+  --contentOffset: calc(var(--offsetSize) * 1.4);
+  /* @offsetSize * 2 means the content won't appear to move at all. Set to a lower value for squishing effects. */
+
+  --textColor: #fff;
+  --overlayColor: #000;
+  --highlightColor: #ffc12d;
+  /* --borderColor: var(--highlightColor); */
+}
+
+/*////////////////////////////////////////*/
+/* Layout */
+
+.panels {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  /* make panels trapezoid */
+  position: relative;
+}
+
+/* border that follows trapezoid shape */
+.panels::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.panels__container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  height: 100%;
+  /* width: 100 + offsetSize*2 -> use calc */
+  width: calc(100% + (var(--offsetSize) * 2));
+  margin: 0 calc(var(--offsetSize) * -1);
+  visibility: hidden;
+}
+
+.panel {
+  display: inline-block;
+  height: 100%;
+  visibility: visible;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/*////////////////////////////////////////*/
+/* Image/Text Container */
+
+.panelRight__content {
+  width: 120%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: center center no-repeat;
+  background-size: cover;
+  position: relative;
+  /* border: solid 5px red; */
+  clip-path: polygon(0 0, 83% 0, 70% 100%, 0% 100%);
+}
+
+.panelRight__content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  transition: opacity var(--duration) var(--ease);
+}
+
+.panelLeft__content {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: center center no-repeat;
+  background-size: cover;
+  position: relative;
+  /* border: solid 5px red; */
+}
+
+.panelLeft__content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  transition: opacity var(--duration) var(--ease);
+}
+
+.bigPhoto {
+  height: 100%;
+}
+
+.bigEmoji {
+  height: 100%;
+}
+
+/*////////////////////////////////////////*/
+/* Title */
+
+.panel__title {
+  pointer-events: auto;
+  color: var(--textColor);
+  position: relative;
+  z-index: 1;
+  transition: color var(--duration) var(--ease);
+}
+
+.panel__title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* background: var(--overlayColor); */
+  /* fade 70% -> use rgba */
+  background: rgba(0, 0, 0, 0.7);
+  border: solid 2px var(--borderColor);
+
+  padding: 0.5em 1em;
+  margin: -0.5em -1em;
+
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all var(--duration) var(--ease);
+  transition-property: opacity, transform;
+}
+
+h3.panel__title {
+  margin: 0 0 -5vh 0;
+  padding: 0 0 0 0;
+  border: 1px solid blue;
+  z-index: 100;
+}
+
+/*////////////////////////////////////////*/
+/* Hover States */
+
+.panel {
+  transform: translate3d(0, 0, 0);
+  transition: transform var(--duration) var(--ease);
+}
+
+.panel .panel__content {
+  transform: translateX(var(--offsetSize));
+  transition: transform var(--duration) var(--ease);
+}
+
+.panel:last-child .panel__content {
+  transform: translateX(calc(var(--offsetSize) * -1));
+}
+
+/* Inactive panel */
+.panels:hover .panel {
+  transform: translate3d(calc(var(--offsetSize) * -1), 0, 0);
+}
+
+.panels:hover .panel .panel__content {
+  transform: translateX(var(--contentOffset));
+}
+
+.panels:hover .panel .panel__content::before {
+  opacity: 0.7;
+}
+
+/* Override styles for an inactive panel AFTER the hovered panel */
+.panels .panel:hover ~ .panel {
+  transform: translate3d(var(--offsetSize), 0, 0);
+}
+
+.panels .panel:hover ~ .panel .panel__content {
+  transform: translateX(calc(var(--contentOffset) * -1));
+}
+
+/* Active panel */
+.panels .panel:hover {
+  z-index: 2;
+  transform: translate3d(var(--offsetSize), 0, 0);
+  pointer-events: auto;
+}
+
+.panels .panel:hover:last-child {
+  /* if hovered panel is last-child */
+  transform: translate3d(calc(var(--offsetSize) * -1), 0, 0);
+}
+
+.panels .panel:hover .panel__content {
+  transform: translateX(0%);
+}
+
+.panels .panel:hover .panel__content::before {
+  opacity: 0;
+}
+
+.panels .panel:hover .panel__title {
+  color: black;
+}
+
+.panels .panel:hover .panel__title::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*////////////////////////////////////////*/
+/* Vertical layout */
+
+.panels--stacked .panels__container {
+  width: 100%;
+  height: calc(100% + (var(--offsetSize) * 2));
+  margin: calc(var(--offsetSize) * -1) 0;
+  flex-direction: column;
+}
+
+.panels--stacked .panel {
+  height: 50%;
+  width: 100%;
+  transform: translate3d(0, 0, 0);
+}
+
+.panels--stacked .panel .panel__content {
+  transform: translate3d(0, var(--offsetSize), 0);
+}
+
+.panels--stacked .panel:last-child .panel__content {
+  transform: translate3d(0, calc(var(--offsetSize) * -1), 0);
+}
+
+/* Inactive panel */
+.panels--stacked:hover .panel {
+  transform: translate3d(0, calc(var(--offsetSize) * -1), 0);
+}
+
+.panels--stacked:hover .panel .panel__content {
+  transform: translate3d(0, var(--contentOffset), 0);
+}
+
+/* Override styles for an inactive panel AFTER the hovered panel */
+.panels--stacked .panel:hover ~ .panel {
+  transform: translate3d(0, var(--offsetSize), 0);
+}
+
+.panels--stacked .panel:hover ~ .panel .panel__content {
+  transform: translate3d(0, calc(var(--contentOffset) * -1), 0);
+}
+
+/* Active panel */
+.panels--stacked .panel:hover {
+  transform: translate3d(0, var(--offsetSize), 0);
+}
+
+.panels--stacked .panel:hover:last-child {
+  transform: translate3d(0, calc(var(--offsetSize) * -1), 0);
+}
+
+.panels--stacked .panel:hover .panel__content {
+  transform: translate3d(0, 0, 0);
+}
+
+/* Responsive */
+
+@media (max-width: 550px) {
+  /* For small screens, ensure stacked behavior via modifier class in HTML or add specific rules */
+  .panels.panels--stacked .panels__container {
+    flex-direction: column;
+  }
+}
+
+/*////////////////////////////////////////*/
+/* Specific Design Setup */
+
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+
+.panel__title {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 800px) {
+  .panel__title {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 600px) {
+  .panel__title {
+    font-size: 1.25em;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
