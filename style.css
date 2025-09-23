@@ -60,6 +60,12 @@ marquee {
   }
 }
 
+@media (max-width: 400px) {
+  #application {
+    margin-top: 200vh;
+  }
+}
+
 #contact {
   margin-top: 80vh;
 }

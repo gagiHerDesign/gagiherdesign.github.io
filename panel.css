@@ -121,7 +121,6 @@
 
 .panel__title {
   pointer-events: auto;
-  color: var(--textColor);
   position: relative;
   z-index: 1;
   transition: color var(--duration) var(--ease);
@@ -136,8 +135,9 @@
   left: 0;
   /* background: var(--overlayColor); */
   /* fade 70% -> use rgba */
-  background: rgba(0, 0, 0, 0.7);
-  border: solid 2px var(--borderColor);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+  /* border: solid 2px var(--textColor); */
 
   padding: 0.5em 1em;
   margin: -0.5em -1em;
@@ -151,8 +151,21 @@
 h3.panel__title {
   margin: 0 0 -5vh 0;
   padding: 0 0 0 0;
-  border: 1px solid blue;
   z-index: 100;
+}
+
+.panelLtitle {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  color: #fff;
+}
+
+.panelRtitle {
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  color: #000;
 }
 
 /*////////////////////////////////////////*/
@@ -216,6 +229,11 @@ h3.panel__title {
 
 .panels .panel:hover .panel__title {
   color: black;
+}
+
+/* when the entire panel is hovered make the title white */
+.panels .panel:hover .panel__title {
+  color: #ffffff;
 }
 
 .panels .panel:hover .panel__title::before {
