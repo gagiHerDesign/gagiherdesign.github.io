@@ -13,6 +13,40 @@
   /* --borderColor: var(--highlightColor); */
 }
 
+/* Preloader */
+#preloader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background: #ffffff;
+  z-index: 9999;
+  transition: opacity 400ms ease, visibility 400ms ease;
+}
+
+#preloader.preloader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader__spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-top-color: var(--highlightColor);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /*////////////////////////////////////////*/
 /* Layout */
 

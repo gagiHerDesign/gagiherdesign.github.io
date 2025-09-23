@@ -12,6 +12,21 @@
 
       gtag('config', 'G-YLYS52W8BS');
     </script>
+    <!-- Microsoft -->
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'tfd35m5kul');
+    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,6 +60,11 @@
   </head>
 
   <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="preloader__spinner" aria-hidden="true"></div>
+      <p>JIACHI HUANG PORTFOLIO</p>
+    </div>
     <main>
       <section id="heroSection" class="section">
         <div class="heroSection">
@@ -326,6 +346,15 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+      // Preloader: hide when all resources have loaded
+      window.addEventListener('load', function () {
+        const pre = document.getElementById('preloader');
+        if (!pre) return;
+        pre.classList.add('preloader--hidden');
+        pre.addEventListener('transitionend', () => pre.remove());
+      });
     </script>
   </body>
 </html>

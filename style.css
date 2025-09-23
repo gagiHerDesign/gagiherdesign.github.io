@@ -51,7 +51,7 @@ marquee {
 }
 
 #application {
-  margin-top: 70vh;
+  margin-top: 120vh;
 }
 
 @media (max-width: 780px) {
@@ -60,12 +60,18 @@ marquee {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   #application {
-    margin-top: 200vh;
+    margin-top: 250vh;
   }
 }
 
 #contact {
   margin-top: 80vh;
+}
+
+@media (max-width: 600px) {
+  #contact {
+    margin-top: 250vh;
+  }
 }
