@@ -62,6 +62,11 @@
   </head>
 
   <body>
+    <div class="custom-cursor" aria-hidden="true">
+      <span class="cursor-core"></span>
+      <span class="cursor-ring--mid"></span>
+      <span class="cursor-ring--outer"></span>
+    </div>
     <!-- Preloader -->
     <div id="preloader">
       <div class="preloader__spinner" aria-hidden="true"></div>
@@ -189,110 +194,94 @@
       <!-- 第二部分 -->
       <section id="application" class="container py-5">
         <h2 class="mb-5 fw-bold">My Recent Work</h2>
-        <div class="row gy-5">
-          <!-- 第一行：文字 + 圖片 -->
-          <div class="row gy-5 flex-row-reverse">
-            <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-              <img src="./img/AIedu.jpg" alt="AIedu" class="img-fluid rounded shadow-sm" />
-            </div>
-            <div
-              class="col-md-6 d-flex flex-column justify-content-center"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="200"
-            >
-              <h3 class="fw-bold">AI assists in education</h3>
-              <p class="text-muted">UX research</p>
-              <p>｜research method｜</p>
-              <div class="mt-2">
-                <a class="btn btn-dark" href="/profile/application/AIedu.html">See more</a>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow-sm">
+              <a href="/profile/application/AIedu.html" class="card-img-link">
+                <img src="./img/AIedu.jpg" alt="AIedu" class="card-img-top" />
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">AI assists in education</h5>
+                <p class="text-muted mb-1">UX research</p>
+                <p>｜research method｜</p>
+                <div class="mt-auto">
+                  <a class="btn btn-dark" href="/profile/application/AIedu.html">See more</a>
+                </div>
               </div>
             </div>
           </div>
-          <!-- 第二行：圖片 + 文字 -->
-          <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-            <img
-              src="./img/GalaxyTrailChatbot.gif"
-              alt="GalaxyTrailChatbot"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div
-            class="col-md-6 d-flex flex-column justify-content-center"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="800"
-          >
-            <h3 class="fw-bold">GalaxyTrail Chatbot</h3>
-            <p class="text-muted">Telegram App Chatbot</p>
-            <p>Python, Node.js, UIUX Design｜</p>
-            <div class="mt-2">
-              <a class="btn btn-dark" href="/profile/application/galaxychat.html">See more</a>
-              <a
-                class="btn btn-light border"
-                href="https://github.com/gagiHerDesign/galaxyTrail_chatbot_telegram"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Github</a
-              >
-            </div>
-          </div>
-          <!-- 第三行：文字 + 圖片 -->
-          <div class="row gy-5 flex-row-reverse">
-            <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-              <img
-                src="./img/application/susi/susi (1).jpg"
-                alt="susi"
-                class="img-fluid rounded shadow-sm"
-              />
-            </div>
-            <div
-              class="col-md-6 d-flex flex-column justify-content-center"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="200"
-            >
-              <h3 class="fw-bold">SUSI</h3>
-              <p class="text-muted">Web E-Commerce Platform</p>
-              <p>｜Vue, Bootstrap, MongoDB, Express.js｜</p>
-              <div class="mt-2">
-                <a class="btn btn-dark" href="/profile/application/susi.html">See more</a>
-                <a
-                  class="btn btn-light border"
-                  href="https://github.com/gagiHerDesign/susi-front"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Github</a
-                >
+          <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="card h-100 border-0 shadow-sm">
+              <a href="/profile/application/galaxychat.html" class="card-img-link">
+                <img
+                  src="./img/GalaxyTrailChatbot.gif"
+                  alt="GalaxyTrailChatbot"
+                  class="card-img-top"
+                />
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">GalaxyTrail Chatbot</h5>
+                <p class="text-muted mb-1">Telegram App Chatbot</p>
+                <p>Python, Node.js, UIUX Design｜</p>
+                <div class="mt-auto">
+                  <a class="btn btn-dark" href="/profile/application/galaxychat.html">See more</a>
+                  <a
+                    class="btn btn-light border"
+                    href="https://github.com/gagiHerDesign/galaxyTrail_chatbot_telegram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Github</a
+                  >
+                </div>
               </div>
             </div>
           </div>
-          <!-- 第四行：圖片 + 文字 -->
-          <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-            <img
-              src="./img/application/vegeChat/vege (1).jpg"
-              alt="vege"
-              class="img-fluid rounded shadow-sm"
-            />
+          <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <div class="card h-100 border-0 shadow-sm">
+              <a href="/profile/application/susi.html" class="card-img-link">
+                <img src="./img/application/susi/susi (1).jpg" alt="susi" class="card-img-top" />
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">SUSI</h5>
+                <p class="text-muted mb-1">Web E-Commerce Platform</p>
+                <p>｜Vue, Bootstrap, MongoDB, Express.js｜</p>
+                <div class="mt-auto">
+                  <a class="btn btn-dark" href="/profile/application/susi.html">See more</a>
+                  <a
+                    class="btn btn-light border"
+                    href="https://github.com/gagiHerDesign/susi-front"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Github</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
-          <div
-            class="col-md-6 d-flex flex-column justify-content-center"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="800"
-          >
-            <h3 class="fw-bold">Taiwan_VEGE</h3>
-            <p class="text-muted">Line App Chatbot</p>
-            <p>｜JavaScript, Node.js, UIUX Design｜</p>
-            <div class="mt-2">
-              <a class="btn btn-dark" href="/profile/application/vegechat.html">See more</a>
-              <a
-                class="btn btn-light border"
-                href="https://github.com/gagiHerDesign/line_bot_Taiwan_vege"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Github</a
-              >
+          <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <div class="card h-100 border-0 shadow-sm">
+              <a href="/profile/application/vegechat.html" class="card-img-link">
+                <img
+                  src="./img/application/vegeChat/vege (1).jpg"
+                  alt="vege"
+                  class="card-img-top"
+                />
+              </a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">Taiwan_VEGE</h5>
+                <p class="text-muted mb-1">Line App Chatbot</p>
+                <p>｜JavaScript, Node.js, UIUX Design｜</p>
+                <div class="mt-auto">
+                  <a class="btn btn-dark" href="/profile/application/vegechat.html">See more</a>
+                  <a
+                    class="btn btn-light border"
+                    href="https://github.com/gagiHerDesign/line_bot_Taiwan_vege"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Github</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -311,22 +300,34 @@
           </div>
           <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-              <div class="card h-100 border-0">
-                <img src="./img/logi/gratia/gratia (1).jpg" class="card-img-top" alt="..." />
+              <div class="card h-100 border-0 position-relative">
+                <a class="card-img-link" href="/profile/logi/gratia.html">
+                  <img src="./img/logi/gratia/gratia (1).jpg" class="card-img-top" alt="gratia" />
+                </a>
                 <div class="card-body">
                   <h5 class="card-title fw-bold">Gratia</h5>
                   <p class="card-text">｜UIUX Design, Product Design |</p>
-                  <a class="btn btn-dark" href="/profile/logi/gratia.html">See more</a>
+                  <a class="btn btn-dark stretched-link" href="/profile/logi/gratia.html"
+                    >See more</a
+                  >
                 </div>
               </div>
             </div>
             <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-              <div class="card h-100 border-0">
-                <img src="./img/logi/eligere/eligere (1).jpg" class="card-img-top" alt="..." />
+              <div class="card h-100 border-0 position-relative">
+                <a class="card-img-link" href="/profile/logi/eligere.html">
+                  <img
+                    src="./img/logi/eligere/eligere (1).jpg"
+                    class="card-img-top"
+                    alt="eligere"
+                  />
+                </a>
                 <div class="card-body">
                   <h5 class="card-title fw-bold">eligere</h5>
                   <p class="card-text">｜UIUX Design, Product Design |</p>
-                  <a class="btn btn-dark" href="/profile/logi/eligere.html">See more</a>
+                  <a class="btn btn-dark stretched-link" href="/profile/logi/eligere.html"
+                    >See more</a
+                  >
                 </div>
               </div>
             </div>
@@ -347,7 +348,7 @@
                 ><i class="bi bi-linkedin"></i
               ></a>
               <a href="https://github.com/gagiHerDesign/gagiherdesign.github.io" target="_blank"
-                ><i class="bi bi-github"></i
+                ><i class="bi bi-github text-light"></i
               ></a>
             </div>
           </div>
@@ -362,6 +363,18 @@
               <li>
                 <a href="/profile/application/vegechat.html" class="text-light text-decoration-none"
                   >VEGE</a
+                >
+              </li>
+              <li>
+                <a href="/profile/application/AIedu.html" class="text-light text-decoration-none"
+                  >AI assists in education</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/profile/application/galaxychat.html"
+                  class="text-light text-decoration-none"
+                  >GalaxyTrail Chatbot</a
                 >
               </li>
             </ul>
@@ -418,5 +431,6 @@
         pre.addEventListener('transitionend', () => pre.remove());
       });
     </script>
+    <script src="./jsEffect/cursor.js"></script>
   </body>
 </html>
