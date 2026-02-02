@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/20b9f2bee6.css"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/profile.css" />
+    <link rel="stylesheet" href="./scroll.css" />
+    <!-- 字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>AIeduProfile</title>
+  </head>
+  <body>
+    <nav
+      class="navbar fixed-top bg-transparent"
+      style="filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3))"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img class="logoJOY" src="/img/JOY@0.75x.png" alt="JOY" />
+        </a>
+      </div>
+    </nav>
+    <main>
+      <div class="container">
+        <div class="article">
+          <h1>AI assists in Education</h1>
+          <h3>UX research project</h3>
+          <p class="pt-5">
+            This project involved a contextual inquiry with educators across multiple teaching
+            environments to understand how they currently evaluate and track student performance. We
+            observed how they balance large class sizes, grading demands, and individualized student
+            support, and what factors shape their ability to provide personalized feedback. Through
+            these observations and interviews, we learned what challenges educators face in
+            monitoring student progress and how AI-generated performance summaries might support
+            their workflow.
+          </p>
+        </div>
+        <div id="imageContainer" class="d-flex justify-content-center align-items-center flex-wrap">
+          <!-- 圖片將由JavaScript動態生成 -->
+        </div>
+      </div>
+    </main>
+
+    <!-- 引入 jQuery 和 GSAP 的 CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+    <script src="./jsEffect/colorBackground.js"></script>
+    <script src="./jsEffect/heroMouseMove.js"></script>
+    <script src="./jsEffect/bootstrapModal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- 獲取圖片 -->
+    <script src="/jsEffect/generateImg.js"></script>
+    <script>
+      generateImages('imageContainer', 45, '/img/application/AIedu/edu({i}).jpg');
+    </script>
+    <!-- modal -->
+    <script>
+      fetch('/profile/template/modal.html')
+        .then((response) => response.text())
+        .then((data) => {
+          document.body.insertAdjacentHTML('beforeend', data);
+        });
+    </script>
+  </body>
+</html>

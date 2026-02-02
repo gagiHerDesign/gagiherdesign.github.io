@@ -46,6 +46,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./panel.css" />
+    <!-- Preload large GIF to warm cache -->
+    <link rel="preload" as="image" href="./img/GalaxyTrailChatbot.gif" />
     <!-- 字體 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -187,9 +189,55 @@
       <!-- 第二部分 -->
       <section id="application" class="container py-5">
         <h2 class="mb-5 fw-bold">My Recent Work</h2>
-
         <div class="row gy-5">
           <!-- 第一行：文字 + 圖片 -->
+          <div class="row gy-5 flex-row-reverse">
+            <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+              <img src="./img/AIedu.jpg" alt="AIedu" class="img-fluid rounded shadow-sm" />
+            </div>
+            <div
+              class="col-md-6 d-flex flex-column justify-content-center"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
+              <h3 class="fw-bold">AI assists in education</h3>
+              <p class="text-muted">UX research</p>
+              <p>｜research method｜</p>
+              <div class="mt-2">
+                <a class="btn btn-dark" href="/profile/application/AIedu.html">See more</a>
+              </div>
+            </div>
+          </div>
+          <!-- 第二行：圖片 + 文字 -->
+          <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+            <img
+              src="./img/GalaxyTrailChatbot.gif"
+              alt="GalaxyTrailChatbot"
+              class="img-fluid rounded shadow-sm"
+            />
+          </div>
+          <div
+            class="col-md-6 d-flex flex-column justify-content-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="800"
+          >
+            <h3 class="fw-bold">GalaxyTrail Chatbot</h3>
+            <p class="text-muted">Telegram App Chatbot</p>
+            <p>Python, Node.js, UIUX Design｜</p>
+            <div class="mt-2">
+              <a class="btn btn-dark" href="/profile/application/galaxychat.html">See more</a>
+              <a
+                class="btn btn-light border"
+                href="https://github.com/gagiHerDesign/galaxyTrail_chatbot_telegram"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Github</a
+              >
+            </div>
+          </div>
+          <!-- 第三行：文字 + 圖片 -->
           <div class="row gy-5 flex-row-reverse">
             <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
               <img
@@ -219,7 +267,7 @@
               </div>
             </div>
           </div>
-          <!-- 第二行：圖片 + 文字 -->
+          <!-- 第四行：圖片 + 文字 -->
           <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
             <img
               src="./img/application/vegeChat/vege (1).jpg"
@@ -335,7 +383,7 @@
             </ul>
           </div>
         </div>
-        <p>© 2025 JIACHI HUANG. All rights reserved.</p>
+        <p>© 2026 JIACHI HUANG. All rights reserved.</p>
       </div>
     </footer>
     <!-- 引入 jQuery 和 GSAP 的 CDN -->
@@ -346,6 +394,20 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+      // Preload large GIF into browser cache (in addition to <link rel=preload>)
+      (function () {
+        try {
+          var p = './img/GalaxyTrailChatbot.gif';
+          var img = new Image();
+          img.src = p;
+          // hint to start decoding earlier
+          if ('decoding' in img) img.decoding = 'sync';
+        } catch (e) {
+          // noop
+        }
+      })();
     </script>
     <script>
       // Preloader: hide when all resources have loaded
